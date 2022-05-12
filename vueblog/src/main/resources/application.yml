@@ -1,0 +1,38 @@
+# DataSource Config
+server:
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.220.35.170:3306/vuevlog?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: zl20194090
+  mail:
+      host:  smtp.qq.com
+      username: 2896239807@qq.com
+      password: yckarrtsntiadhff
+      default-encoding: UTF-8
+      properties:
+        mail:
+         smtp:
+          ssl:
+           enable: true
+  redis:
+    host: 124.220.35.170
+    port: 6379
+    timeout: 5000
+shiro-redis:
+  enabled: true
+  redis-manager:
+    host: 124.220.35.170:6379
+    maxTotal: 1000
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**Mapper.xml
+zl:
+  jwt:
+    # 部署上线务必修改此配置，以保证token的安全性
+    secret: aff1df24e15d4556b81e3c68bd5ee075
+    expire: 172800
+    header: token
+

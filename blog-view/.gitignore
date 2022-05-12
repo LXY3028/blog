@@ -36,6 +36,7 @@ bin-release/
 *.iml
 *.ipr
 *.iml
+node_modules
 
 ### NetBeans ###
 /nbproject/private/
